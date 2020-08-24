@@ -3,12 +3,12 @@ const Stack = () => {
     let top = -1;
 
     const push = (element) => {
-        top++;
-        date[top] = element;
         if (element == parseInt(element)) {
+            top++;
+            date[top] = element;
             return element
         } else {
-            date.splice(top--)
+            //date.splice(top--)
             return (`${element} - Elemento não é número inteiro`)
         }
     }
