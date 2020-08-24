@@ -9,7 +9,7 @@ const Stack = () => {
             return element
         } else {
             //date.splice(top--)
-            return (`${element} - Elemento não é número inteiro`)
+            return (`${element} - Elemento não será adicionado durante o empilhamento!`)
         }
     }
 
