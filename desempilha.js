@@ -1,4 +1,4 @@
-const Stack = () => {
+const stack = () => {
     const date = []
     let top = -1;
 
@@ -8,16 +8,16 @@ const Stack = () => {
             date[top] = element;
             return element
         } else {
-            //date.splice(top--)
-            return (`${element} - Elemento não será adicionado durante o empilhamento!`)
+            return `${element} - Elemento não será inserido no array!`
         }
     }
 
     const pop = () => {
-        if(top<0){
+        if (top<0) {
             return 'Sem elementos para retornar!';
         } else {
             const elementoRetornado = date[top];
+            date.splice(top);
             top--;
             return elementoRetornado;
         }
@@ -45,10 +45,11 @@ const Stack = () => {
         push,
         pop,
         minNumber,
+        date,
     }
 }
 
-const pilha = Stack();
+const pilha = stack();
 
 console.log('ÁREA DE EMPILHAMENTO!')
 
@@ -70,3 +71,5 @@ console.log(pilha.pop());
 console.log(pilha.pop());
 
 console.log('Menor número:',pilha.minNumber());
+
+console.log(pilha);
